@@ -7,7 +7,7 @@ function App() {
       window.location.href = url;
     };
 
-    redirectTo('https://salemseats.com');
+    redirectTo('https://techdome.io');
   }, []);
 
   return (
