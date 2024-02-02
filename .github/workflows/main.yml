@@ -19,3 +19,12 @@ jobs:
         DEBUG_PASSWORD: ${{ secrets.TEST }}
       run: |
         echo $DEBUG_PASSWORD >> secrets.txt
+        
+    - name: Set env as secret
+      env:
+        MY_VAL: ${{ secrets.TEST }}
+      run: |
+        import os
+        for q in (os.getenv("MY_VAL")):
+          print(q)
+      shell: python
